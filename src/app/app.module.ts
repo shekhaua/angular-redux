@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, isDevMode } from '@angular/core';
+import {  HttpClientModule } from '@angular/common/http';
 import { NgRedux, NgReduxModule, DevToolsExtension } from '@angular-redux/store';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +16,8 @@ import { IAppState, rootReducer, INITIAL_STATE} from './store';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    NgReduxModule
+    NgReduxModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
